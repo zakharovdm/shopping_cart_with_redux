@@ -1,14 +1,7 @@
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store';
 import CartButton from '../Cart/CartButton';
 import classes from './MainHeader.module.css';
 
 const MainHeader = (props) => {
-  const dispatch = useDispatch()
-  
-  const showCartHandler = () => {
-    dispatch(cartActions.toogleCart());
-  }
 
   return (
     <header className={classes.header}>
@@ -16,7 +9,7 @@ const MainHeader = (props) => {
       <nav>
         <ul>
           <li>
-            <CartButton onShow={showCartHandler}/>
+            <CartButton />
           </li>
         </ul>
       </nav>
